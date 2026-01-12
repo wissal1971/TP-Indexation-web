@@ -5,20 +5,36 @@ import time
 import heapq
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
-from urllib.parse import urlparse, urljoin, urldefrag
+from urllib.parse import urlparse, urljoin, urldefrag, parse_qsl, urlencode
 from urllib import robotparser
 
 from bs4 import BeautifulSoup
 
 
 # ----------------------------
-# Helpers URL
+# URL helpers
 # ----------------------------
 
-def normalize_url(url: str) -> str:
-    """Remove #fragments and strip."""
+def normalize_url_keep_query(url: str) -> str:
+    """Remove fragments (#...) but keep query params (?page=..., ?category=...)."""
     clean, _ = urldefrag(url)
     return clean.strip()
+
+
+def canonicalize_url(url: str) -> str:
+    """
+    Normalise une URL pour éviter les doublons:
+    - supprime #fragment
+    - garde query mais trie les paramètres
+    """
+    clean, _ = urldefrag(url)
+    p = urlparse(clean)
+
+    query_pairs = parse_qsl(p.query, keep_blank_values=True)
+    query_pairs.sort()
+    new_query = urlencode(query_pairs)
+
+    return f"{p.scheme}://{p.netloc}{p.path}" + (f"?{new_query}" if new_query else "")
 
 
 def get_domain(url: str) -> str:
@@ -32,14 +48,12 @@ def is_internal(url: str, base_domain: str) -> bool:
 def is_valid_href(href: str) -> bool:
     if not href:
         return False
-    href_l = href.strip().lower()
-    if href_l.startswith(("mailto:", "tel:", "javascript:")):
-        return False
-    return True
+    h = href.strip().lower()
+    return not h.startswith(("mailto:", "tel:", "javascript:"))
 
 
 # ----------------------------
-# Robots.txt
+# robots.txt
 # ----------------------------
 
 def build_robot_parser(start_url: str) -> robotparser.RobotFileParser:
@@ -50,7 +64,6 @@ def build_robot_parser(start_url: str) -> robotparser.RobotFileParser:
     try:
         rp.read()
     except Exception:
-        # If robots can't be read, we keep rp but we'll treat can_fetch safely
         pass
     return rp
 
@@ -59,7 +72,6 @@ def can_fetch(rp: robotparser.RobotFileParser, user_agent: str, url: str) -> boo
     try:
         return rp.can_fetch(user_agent, url)
     except Exception:
-        # If parser fails, be permissive for TP (or set False to be strict)
         return True
 
 
@@ -76,191 +88,166 @@ def polite_wait(last_request_time: float, delay_s: float) -> float:
 
 
 def fetch_html(url: str, user_agent: str, last_request_time: float, delay_s: float) -> tuple[str | None, float]:
-    """
-    Fetch HTML with politeness.
-    Returns (html_or_none, new_last_request_time).
-    """
     last_request_time = polite_wait(last_request_time, delay_s)
-
     try:
         req = Request(url, headers={"User-Agent": user_agent, "Accept": "text/html"})
         with urlopen(req, timeout=12) as resp:
-            content_type = resp.headers.get("Content-Type", "")
-            if "text/html" not in content_type:
+            ctype = resp.headers.get("Content-Type", "")
+            if "text/html" not in ctype:
                 return None, time.time()
             html = resp.read().decode("utf-8", errors="replace")
             return html, time.time()
-
     except HTTPError as e:
         print(f"[HTTP {e.code}] {url}")
     except URLError as e:
         print(f"[URL error] {url} -> {e.reason}")
     except Exception as e:
         print(f"[Unexpected] {url} -> {e}")
-
     return None, time.time()
 
 
 # ----------------------------
-# Parsing
+# Parsing (output fields)
 # ----------------------------
 
 def extract_title(soup: BeautifulSoup) -> str:
+    """Prefer H1 (product name), fallback to <title>."""
+    h1 = soup.find("h1")
+    if h1:
+        txt = h1.get_text(" ", strip=True)
+        if txt:
+            return txt
     if soup.title:
         return soup.title.get_text(strip=True)
-    h1 = soup.find("h1")
-    return h1.get_text(strip=True) if h1 else ""
+    return ""
 
 
-def extract_first_paragraph(soup: BeautifulSoup, max_len: int = 250) -> str:
+def extract_description(soup: BeautifulSoup, max_len: int = 2000) -> str:
     """
-    Extract a short, relevant 'first paragraph':
-    1) first meaningful <p> in main/article/body (after removing nav/header/footer/aside)
-    2) fallback: first reasonable text chunk (card-like) not too long
+    First meaningful <p> in main/article/body (pages listing may return "").
     """
     container = soup.find("main") or soup.find("article") or soup.body
     if not container:
         return ""
 
-    # remove noisy sections
     for tag in container.find_all(["nav", "header", "footer", "aside"]):
         tag.decompose()
 
-    # 1) first significant <p>
     for p in container.find_all("p"):
         text = p.get_text(" ", strip=True)
         if text and len(text) >= 40:
             return text[:max_len]
 
-    # 2) fallback: first chunk that looks like content (avoid menus)
-    for tag in container.find_all(["article", "section", "div"], limit=200):
-        text = tag.get_text(" ", strip=True)
-        if not text:
-            continue
-        low = text.lower()
-        if "login" in low and "password" in low:
-            continue
-        # avoid taking the whole page: we want something bounded
-        if 80 <= len(text) <= 500:
-            return text[:max_len]
-
     return ""
 
 
-def extract_internal_links(soup: BeautifulSoup, current_url: str, base_domain: str) -> list[dict]:
+def extract_links(soup: BeautifulSoup, current_url: str) -> list[str]:
     """
-    Liens pertinents = liens vers les pages produit (/product/...)
+    links = list of absolute URLs found in body, internal + external.
+    Keep query params, remove fragments.
     """
     body = soup.body
     if not body:
         return []
 
-    seen_urls = set()
-    links: list[dict] = []
-
+    urls: list[str] = []
     for a in body.find_all("a", href=True):
         href = a.get("href", "").strip()
         if not is_valid_href(href):
             continue
+        abs_url = normalize_url_keep_query(urljoin(current_url, href))
+        if abs_url:
+            urls.append(abs_url)
+    return urls
 
-        abs_url = normalize_url(urljoin(current_url, href))
-        if not abs_url or not is_internal(abs_url, base_domain):
-            continue
 
-        # ✅ uniquement les pages produit
-        path = urlparse(abs_url).path.lower()
-        if not path.startswith("/product/"):
-            continue
+def extract_product_features(soup: BeautifulSoup) -> dict:
+    return {}
 
-        # ✅ dédoublonnage
-        if abs_url in seen_urls:
-            continue
-        seen_urls.add(abs_url)
 
-        links.append({
-            "url": abs_url,
-            "anchor_text": a.get_text(" ", strip=True),
-            "source_url": current_url
-        })
-
-    return links
+def extract_product_reviews(soup: BeautifulSoup) -> list[dict]:
+    return []
 
 
 # ----------------------------
-# Priority crawling
+# Crawling logic
 # ----------------------------
 
 def compute_priority(url: str) -> int:
-    """
-    Lower = higher priority.
-    Prioritize URLs containing 'product'.
-    """
+    """Lower = higher priority. Prioritize URLs containing 'product'."""
     return 0 if "product" in url.lower() else 10
 
 
 def crawl(start_url: str, max_pages: int, output_path: str, delay_s: float = 0.5) -> None:
     user_agent = "TP1-WebCrawler/1.0 (educational)"
-    start_url = normalize_url(start_url)
 
+    start_url = normalize_url_keep_query(start_url)
     base_domain = get_domain(start_url)
     rp = build_robot_parser(start_url)
 
-    # frontier items: (priority, insertion_order, url)
     frontier: list[tuple[int, int, str]] = []
-    seen: set[str] = set()
-    visited: set[str] = set()
+    seen: set[str] = set()      # canonical urls
+    visited: set[str] = set()   # canonical urls
 
-    insertion = 0
-    heapq.heappush(frontier, (compute_priority(start_url), insertion, start_url))
-    seen.add(start_url)
-    insertion += 1
-
-    results: list[dict] = []
+    order = 0
+    heapq.heappush(frontier, (compute_priority(start_url), order, start_url))
+    seen.add(canonicalize_url(start_url))
+    order += 1
 
     last_request_time = 0.0
 
-    while frontier and len(visited) < max_pages:
-        _prio, _order, url = heapq.heappop(frontier)
-        if url in visited:
-            continue
-        visited.add(url)
+    with open(output_path, "w", encoding="utf-8") as f_out:
+        written = 0
 
-        # robots check
-        if not can_fetch(rp, user_agent, url):
-            # skip politely if disallowed
-            continue
+        while frontier and written < max_pages:
+            _prio, _ord, url = heapq.heappop(frontier)
 
-        html, last_request_time = fetch_html(url, user_agent, last_request_time, delay_s)
-        if html is None:
-            continue
-
-        soup = BeautifulSoup(html, "html.parser")
-
-        title = extract_title(soup)
-        first_paragraph = extract_first_paragraph(soup)
-        links = extract_internal_links(soup, current_url=url, base_domain=base_domain)
-
-        results.append({
-            "url": url,
-            "title": title,
-            "first_paragraph": first_paragraph,
-            "links": links
-        })
-
-        # enqueue new links
-        for link in links:
-            next_url = link["url"]
-            if next_url in seen:
+            canon = canonicalize_url(url)
+            if canon in visited:
                 continue
-            seen.add(next_url)
-            heapq.heappush(frontier, (compute_priority(next_url), insertion, next_url))
-            insertion += 1
+            visited.add(canon)
 
-    # write JSON
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+            if not can_fetch(rp, user_agent, url):
+                continue
 
-    print(f"Done. Visited: {len(results)} pages. Output: {output_path}")
+            html, last_request_time = fetch_html(url, user_agent, last_request_time, delay_s)
+            if html is None:
+                continue
+
+            soup = BeautifulSoup(html, "html.parser")
+
+            title = extract_title(soup)
+            description = extract_description(soup)
+            product_features = extract_product_features(soup)
+            product_reviews = extract_product_reviews(soup)
+            links = extract_links(soup, current_url=url)
+
+            obj = {
+                "url": url,
+                "title": title,
+                "description": description,
+                "product_features": product_features,
+                "links": links,
+                "product_reviews": product_reviews
+            }
+
+            f_out.write(json.dumps(obj, ensure_ascii=False) + "\n")
+            written += 1
+
+            # enqueue internal links only
+            for link_url in links:
+                if not is_internal(link_url, base_domain):
+                    continue
+
+                canon_link = canonicalize_url(link_url)
+                if canon_link in seen:
+                    continue
+
+                seen.add(canon_link)
+                heapq.heappush(frontier, (compute_priority(link_url), order, link_url))
+                order += 1
+
+    print(f"Done. Visited: {written} pages. Output: {output_path}")
 
 
 # ----------------------------
@@ -280,7 +267,7 @@ def read_args(argv: list[str]) -> tuple[str, int, str]:
     except ValueError as e:
         raise ValueError("max_pages must be an integer (example: 50)") from e
 
-    output_path = argv[3] if len(argv) >= 4 else "crawl_results.json"
+    output_path = argv[3] if len(argv) >= 4 else "output.json"
     return start_url, max_pages, output_path
 
 

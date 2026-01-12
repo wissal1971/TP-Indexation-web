@@ -149,29 +149,39 @@ def extract_first_paragraph(soup: BeautifulSoup, max_len: int = 250) -> str:
 
 def extract_internal_links(soup: BeautifulSoup, current_url: str, base_domain: str) -> list[dict]:
     """
-    Extract internal links from <body>.
-    Each link dict contains: url, anchor_text, source_url
+    Liens pertinents = liens vers les pages produit (/product/...)
     """
     body = soup.body
     if not body:
         return []
 
+    seen_urls = set()
     links: list[dict] = []
+
     for a in body.find_all("a", href=True):
         href = a.get("href", "").strip()
         if not is_valid_href(href):
             continue
 
         abs_url = normalize_url(urljoin(current_url, href))
-        if not abs_url:
+        if not abs_url or not is_internal(abs_url, base_domain):
             continue
 
-        if is_internal(abs_url, base_domain):
-            links.append({
-                "url": abs_url,
-                "anchor_text": a.get_text(" ", strip=True),
-                "source_url": current_url
-            })
+        # ✅ uniquement les pages produit
+        path = urlparse(abs_url).path.lower()
+        if not path.startswith("/product/"):
+            continue
+
+        # ✅ dédoublonnage
+        if abs_url in seen_urls:
+            continue
+        seen_urls.add(abs_url)
+
+        links.append({
+            "url": abs_url,
+            "anchor_text": a.get_text(" ", strip=True),
+            "source_url": current_url
+        })
 
     return links
 

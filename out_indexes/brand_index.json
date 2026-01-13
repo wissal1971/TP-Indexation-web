@@ -1,0 +1,46 @@
+{
+  "chocodelight": [
+    "https://web-scraping.dev/product/1",
+    "https://web-scraping.dev/product/13",
+    "https://web-scraping.dev/product/25"
+  ],
+  "gamefuel": [
+    "https://web-scraping.dev/product/14",
+    "https://web-scraping.dev/product/15",
+    "https://web-scraping.dev/product/16",
+    "https://web-scraping.dev/product/17",
+    "https://web-scraping.dev/product/18",
+    "https://web-scraping.dev/product/2",
+    "https://web-scraping.dev/product/26",
+    "https://web-scraping.dev/product/27",
+    "https://web-scraping.dev/product/28",
+    "https://web-scraping.dev/product/3",
+    "https://web-scraping.dev/product/4",
+    "https://web-scraping.dev/product/5",
+    "https://web-scraping.dev/product/6"
+  ],
+  "magicsteps": [
+    "https://web-scraping.dev/product/10",
+    "https://web-scraping.dev/product/22"
+  ],
+  "timelessfootwear": [
+    "https://web-scraping.dev/product/11",
+    "https://web-scraping.dev/product/23"
+  ],
+  "catcozies": [
+    "https://web-scraping.dev/product/12",
+    "https://web-scraping.dev/product/24"
+  ],
+  "outdoorgear": [
+    "https://web-scraping.dev/product/19",
+    "https://web-scraping.dev/product/7"
+  ],
+  "elevate": [
+    "https://web-scraping.dev/product/20",
+    "https://web-scraping.dev/product/8"
+  ],
+  "strideahead": [
+    "https://web-scraping.dev/product/21",
+    "https://web-scraping.dev/product/9"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "italy": [
+    "https://web-scraping.dev/product/11",
+    "https://web-scraping.dev/product/23"
+  ],
+  "usa": [
+    "https://web-scraping.dev/product/12",
+    "https://web-scraping.dev/product/24"
+  ]
+}

@@ -30,7 +30,7 @@ PRODUCT_ID_RE = re.compile(r"/product/(\d+)(?:/|$)")
 # IO
 # =========================
 def load_jsonl(path: Path):
-    """Yield one dict per JSONL line."""
+    """Créer un dictionnaire par line JSON."""
     with path.open("r", encoding="utf-8") as f:
         for i, line in enumerate(f, start=1):
             line = line.strip()
@@ -43,7 +43,7 @@ def load_jsonl(path: Path):
 
 
 def save_json(obj, path: Path):
-    """Save JSON with UTF-8 and indentation."""
+    """Sauvegarde JSON avec UTF-8 et indentation."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
@@ -53,7 +53,7 @@ def save_json(obj, path: Path):
 # URL helpers
 # =========================
 def extract_product_id(url: str):
-    """Extract product id from URL path if present, else None."""
+    """Récupère l’ID du produit dans l’URL si possible, sinon None."""
     if not url:
         return None
     parsed = urlparse(url)
@@ -63,7 +63,7 @@ def extract_product_id(url: str):
 
 
 def extract_variant(url: str):
-    """Extract ?variant=... if present, else None."""
+    """Extrait la variante depuis l’URL."""
     if not url:
         return None
     parsed = urlparse(url)
@@ -81,7 +81,7 @@ def normalize_token(raw: str):
 
 
 def tokenize(text: str):
-    """Space tokenization + cleaning + stopwords removal."""
+    """Tokenisation par espace avec nettoyage et suppression des stopwords."""
     if not text:
         return []
     out = []
@@ -93,7 +93,7 @@ def tokenize(text: str):
 
 
 def tokenize_with_positions(text: str):
-    """Return list of (token, position_index_in_field)."""
+    """Retourne une liste de couples (token, position dans le champ)."""
     if not text:
         return []
     out = []
@@ -110,7 +110,7 @@ def tokenize_with_positions(text: str):
 # Doc prep
 # =========================
 def deduplicate_by_url(docs):
-    """Keep first occurrence per URL."""
+    """Conserve uniquement la première occurrence de chaque URL."""
     seen = set()
     out = []
     for d in docs:
@@ -124,8 +124,7 @@ def deduplicate_by_url(docs):
 
 def build_documents_section(docs):
     """
-    Store links and identifiers for each document URL.
-    This is what you called "les liens" (field `links`).
+    Stocke les liens et les identifiants pour chaque URL de document.
     """
     documents = {}
     for d in docs:
@@ -142,7 +141,7 @@ def build_documents_section(docs):
 # Index builders
 # =========================
 def build_inverted_index_urls(docs, field_name: str):
-    """token -> sorted list of document URLs."""
+    """token -> URLs des documents (triées)."""
     index = defaultdict(set)
     for d in docs:
         url = d["url"]
@@ -166,7 +165,7 @@ def build_positional_index_urls(docs, field_name: str):
 def build_reviews_stats_index(docs):
     """
     url -> {total_reviews, avg_rating, last_rating}
-    (NOT inverted)
+    (index non inversé)
     """
     index = {}
     for d in docs:
@@ -196,9 +195,10 @@ def build_reviews_stats_index(docs):
 
 def build_feature_inverted_index_urls(docs, feature_key: str):
     """
-    Feature inverted index:
-      token -> sorted list of canonical product URLs (NO variants)
-    Only documents that have a product_id and NO variant.
+    Index inversé des features :
+    token -> liste triée des URLs canoniques des produits (sans variantes).
+    Uniquement pour les documents ayant un product_id et aucune variante.
+
     """
     index = defaultdict(set)
     for d in docs:
@@ -244,25 +244,27 @@ def main():
     docs = deduplicate_by_url(docs)
     print(f"Total documents read: {len(docs)}")
 
-    # Common documents section (contains the 'links' field)
+    # Section commune des documents (contient le champ « links »)
+
     documents_section = build_documents_section(docs)
 
-    # TITLE index: inverted + positional, doc_id = URL
+    # Index du titre : inversé + positionnel, identifiant du document = URL
+
     title_inverted = build_inverted_index_urls(docs, "title")
     title_positional = build_positional_index_urls(docs, "title")
 
-    # DESCRIPTION index: inverted + positional, doc_id = URL
+    # DESCRIPTION index
     desc_inverted = build_inverted_index_urls(docs, "description")
     desc_positional = build_positional_index_urls(docs, "description")
 
-    # REVIEWS stats index (not inverted)
+    # REVIEWS stats index 
     reviews_stats = build_reviews_stats_index(docs)
 
-    # FEATURES: brand and origin (in this dataset origin == "made in")
+    # FEATURES: brand and origin 
     brand_index = build_feature_inverted_index_urls(docs, "brand")
     origin_index = build_feature_inverted_index_urls(docs, "made in")
 
-    # Save ONLY 5 files, each one includes documents + index
+    # Sauvegarde des index   
     save_json(title_inverted, OUT_DIR / "title_index.json")
     save_json(desc_inverted, OUT_DIR / "description_index.json")
     save_json(brand_index, OUT_DIR / "brand_index.json")
@@ -270,12 +272,7 @@ def main():
     save_json(reviews_stats, OUT_DIR / "reviews_index.json")
 
 
-    print("✅ Saved 5 files into:", OUT_DIR.resolve())
-    print(" - title_index.json (includes links + inverted + positional)")
-    print(" - description_index.json (includes links + inverted + positional)")
-    print(" - brand_index.json (includes links + token->URLs)")
-    print(" - origin_index.json (includes links + token->URLs)")
-    print(" - reviews_index.json (includes links + stats per URL)")
+
 
 
 if __name__ == "__main__":

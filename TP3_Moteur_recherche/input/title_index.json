@@ -1,0 +1,2136 @@
+{
+  "webscrapingdev": {
+    "https://web-scraping.dev/products": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=1": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=2": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=3": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=4": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=5": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=1": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=2": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=3": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=4": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=5": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household&page=1": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household&page=2": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household&page=3": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household&page=4": [
+      0
+    ],
+    "https://web-scraping.dev/products?category=household&page=5": [
+      0
+    ],
+    "https://web-scraping.dev/products?page=1": [
+      0
+    ],
+    "https://web-scraping.dev/products?page=2": [
+      0
+    ],
+    "https://web-scraping.dev/products?page=3": [
+      0
+    ],
+    "https://web-scraping.dev/products?page=4": [
+      0
+    ],
+    "https://web-scraping.dev/products?page=5": [
+      0
+    ]
+  },
+  "product": {
+    "https://web-scraping.dev/products": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=1": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=2": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=3": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=4": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=5": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=1": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=2": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=3": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=4": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=5": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household&page=1": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household&page=2": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household&page=3": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household&page=4": [
+      1
+    ],
+    "https://web-scraping.dev/products?category=household&page=5": [
+      1
+    ],
+    "https://web-scraping.dev/products?page=1": [
+      1
+    ],
+    "https://web-scraping.dev/products?page=2": [
+      1
+    ],
+    "https://web-scraping.dev/products?page=3": [
+      1
+    ],
+    "https://web-scraping.dev/products?page=4": [
+      1
+    ],
+    "https://web-scraping.dev/products?page=5": [
+      1
+    ]
+  },
+  "page": {
+    "https://web-scraping.dev/products": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=1": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=2": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=3": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=4": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=5": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=1": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=2": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=3": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=4": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=5": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household&page=1": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household&page=2": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household&page=3": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household&page=4": [
+      2
+    ],
+    "https://web-scraping.dev/products?category=household&page=5": [
+      2
+    ],
+    "https://web-scraping.dev/products?page=1": [
+      2
+    ],
+    "https://web-scraping.dev/products?page=2": [
+      2
+    ],
+    "https://web-scraping.dev/products?page=3": [
+      2
+    ],
+    "https://web-scraping.dev/products?page=4": [
+      2
+    ],
+    "https://web-scraping.dev/products?page=5": [
+      2
+    ]
+  },
+  "1": {
+    "https://web-scraping.dev/products": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=apparel": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=1": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=1": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household&page=1": [
+      3
+    ],
+    "https://web-scraping.dev/products?page=1": [
+      3
+    ]
+  },
+  "box": {
+    "https://web-scraping.dev/product/1": [
+      0
+    ],
+    "https://web-scraping.dev/product/13": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/25": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-large": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-small": [
+      0
+    ]
+  },
+  "chocolate": {
+    "https://web-scraping.dev/product/1": [
+      1
+    ],
+    "https://web-scraping.dev/product/13": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/25": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-large": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-small": [
+      1
+    ]
+  },
+  "candy": {
+    "https://web-scraping.dev/product/1": [
+      2
+    ],
+    "https://web-scraping.dev/product/13": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-small": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-small": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-small": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-small": [
+      2
+    ],
+    "https://web-scraping.dev/product/25": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-small": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-large": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-medium": [
+      2
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-small": [
+      2
+    ]
+  },
+  "classic": {
+    "https://web-scraping.dev/product/11": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=black40": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=black41": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=black42": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=white40": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=white41": [
+      0
+    ],
+    "https://web-scraping.dev/product/11?variant=white42": [
+      0
+    ],
+    "https://web-scraping.dev/product/23": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=black40": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=black41": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=black42": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=white40": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=white41": [
+      0
+    ],
+    "https://web-scraping.dev/product/23?variant=white42": [
+      0
+    ]
+  },
+  "leather": {
+    "https://web-scraping.dev/product/11": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=black40": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=black41": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=black42": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=white40": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=white41": [
+      1
+    ],
+    "https://web-scraping.dev/product/11?variant=white42": [
+      1
+    ],
+    "https://web-scraping.dev/product/23": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=black40": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=black41": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=black42": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=white40": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=white41": [
+      1
+    ],
+    "https://web-scraping.dev/product/23?variant=white42": [
+      1
+    ]
+  },
+  "sneakers": {
+    "https://web-scraping.dev/product/11": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=black40": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=black41": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=black42": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=white40": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=white41": [
+      2
+    ],
+    "https://web-scraping.dev/product/10": [
+      2
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-5": [
+      2
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/10?variant=red-5": [
+      2
+    ],
+    "https://web-scraping.dev/product/10?variant=red-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/11?variant=white42": [
+      2
+    ],
+    "https://web-scraping.dev/product/22": [
+      2
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-5": [
+      2
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/22?variant=red-5": [
+      2
+    ],
+    "https://web-scraping.dev/product/22?variant=red-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/23": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=black40": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=black41": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=black42": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=white40": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=white41": [
+      2
+    ],
+    "https://web-scraping.dev/product/23?variant=white42": [
+      2
+    ]
+  },
+  "black40": {
+    "https://web-scraping.dev/product/11?variant=black40": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=black40": [
+      4
+    ]
+  },
+  "black41": {
+    "https://web-scraping.dev/product/11?variant=black41": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=black41": [
+      4
+    ]
+  },
+  "black42": {
+    "https://web-scraping.dev/product/11?variant=black42": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=black42": [
+      4
+    ]
+  },
+  "white40": {
+    "https://web-scraping.dev/product/11?variant=white40": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=white40": [
+      4
+    ]
+  },
+  "white41": {
+    "https://web-scraping.dev/product/11?variant=white41": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=white41": [
+      4
+    ]
+  },
+  "kids": {
+    "https://web-scraping.dev/product/10": [
+      0
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-5": [
+      0
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-6": [
+      0
+    ],
+    "https://web-scraping.dev/product/10?variant=red-5": [
+      0
+    ],
+    "https://web-scraping.dev/product/10?variant=red-6": [
+      0
+    ],
+    "https://web-scraping.dev/product/22": [
+      0
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-5": [
+      0
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-6": [
+      0
+    ],
+    "https://web-scraping.dev/product/22?variant=red-5": [
+      0
+    ],
+    "https://web-scraping.dev/product/22?variant=red-6": [
+      0
+    ]
+  },
+  "lightup": {
+    "https://web-scraping.dev/product/10": [
+      1
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-5": [
+      1
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/10?variant=red-5": [
+      1
+    ],
+    "https://web-scraping.dev/product/10?variant=red-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/22": [
+      1
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-5": [
+      1
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/22?variant=red-5": [
+      1
+    ],
+    "https://web-scraping.dev/product/22?variant=red-6": [
+      1
+    ]
+  },
+  "blue": {
+    "https://web-scraping.dev/product/10?variant=blue-5": [
+      4
+    ],
+    "https://web-scraping.dev/product/10?variant=blue-6": [
+      4
+    ],
+    "https://web-scraping.dev/product/17": [
+      0
+    ],
+    "https://web-scraping.dev/product/17?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/17?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      5
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-5": [
+      4
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-6": [
+      4
+    ],
+    "https://web-scraping.dev/product/5": [
+      0
+    ],
+    "https://web-scraping.dev/product/5?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/5?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      5
+    ]
+  },
+  "5": {
+    "https://web-scraping.dev/product/10?variant=blue-5": [
+      5
+    ],
+    "https://web-scraping.dev/product/10?variant=red-5": [
+      5
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-5": [
+      5
+    ],
+    "https://web-scraping.dev/product/22?variant=red-5": [
+      5
+    ],
+    "https://web-scraping.dev/products?category=apparel&page=5": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=5": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household&page=5": [
+      3
+    ],
+    "https://web-scraping.dev/products?page=5": [
+      3
+    ]
+  },
+  "6": {
+    "https://web-scraping.dev/product/10?variant=blue-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/10?variant=red-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/19?variant=6": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      6
+    ],
+    "https://web-scraping.dev/product/22?variant=blue-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/22?variant=red-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/7?variant=6": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      6
+    ]
+  },
+  "red": {
+    "https://web-scraping.dev/product/10?variant=red-5": [
+      4
+    ],
+    "https://web-scraping.dev/product/10?variant=red-6": [
+      4
+    ],
+    "https://web-scraping.dev/product/14": [
+      1
+    ],
+    "https://web-scraping.dev/product/14?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/16": [
+      0
+    ],
+    "https://web-scraping.dev/product/16?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/16?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/2": [
+      1
+    ],
+    "https://web-scraping.dev/product/22?variant=red-5": [
+      4
+    ],
+    "https://web-scraping.dev/product/22?variant=red-6": [
+      4
+    ],
+    "https://web-scraping.dev/product/26": [
+      1
+    ],
+    "https://web-scraping.dev/product/26?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/28": [
+      0
+    ],
+    "https://web-scraping.dev/product/28?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/28?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/2?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/4": [
+      0
+    ],
+    "https://web-scraping.dev/product/4?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/4?variant=six-pack": [
+      0
+    ]
+  },
+  "white42": {
+    "https://web-scraping.dev/product/11?variant=white42": [
+      4
+    ],
+    "https://web-scraping.dev/product/23?variant=white42": [
+      4
+    ]
+  },
+  "catear": {
+    "https://web-scraping.dev/product/12": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=darkgrey-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=darkgrey-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/24": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-small": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-medium": [
+      0
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-small": [
+      0
+    ]
+  },
+  "beanie": {
+    "https://web-scraping.dev/product/12": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=darkgrey-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=darkgrey-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/24": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-small": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-medium": [
+      1
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-small": [
+      1
+    ]
+  },
+  "darkgrey": {
+    "https://web-scraping.dev/product/12?variant=darkgrey-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/12?variant=darkgrey-small": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-small": [
+      3
+    ]
+  },
+  "medium": {
+    "https://web-scraping.dev/product/12?variant=darkgrey-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-medium": [
+      5
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-medium": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-medium": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-medium": [
+      5
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-medium": [
+      5
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-medium": [
+      5
+    ]
+  },
+  "small": {
+    "https://web-scraping.dev/product/12?variant=darkgrey-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-small": [
+      5
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-small": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-small": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-small": [
+      5
+    ],
+    "https://web-scraping.dev/product/24?variant=darkgrey-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-small": [
+      5
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-small": [
+      5
+    ]
+  },
+  "grey": {
+    "https://web-scraping.dev/product/12?variant=grey-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/12?variant=grey-small": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=grey-small": [
+      3
+    ]
+  },
+  "pink": {
+    "https://web-scraping.dev/product/12?variant=pink-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/12?variant=pink-small": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=pink-small": [
+      3
+    ]
+  },
+  "sand": {
+    "https://web-scraping.dev/product/12?variant=sand-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/12?variant=sand-small": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-medium": [
+      3
+    ],
+    "https://web-scraping.dev/product/24?variant=sand-small": [
+      3
+    ]
+  },
+  "cherry": {
+    "https://web-scraping.dev/product/13?variant=cherry-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=cherry-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-small": [
+      4
+    ]
+  },
+  "large": {
+    "https://web-scraping.dev/product/13?variant=cherry-large": [
+      5
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-large": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=cherry-large": [
+      5
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-large": [
+      5
+    ],
+    "https://web-scraping.dev/product/25?variant=cherry-large": [
+      5
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-large": [
+      5
+    ]
+  },
+  "orange": {
+    "https://web-scraping.dev/product/13?variant=orange-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/13?variant=orange-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/1?variant=orange-small": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-large": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-medium": [
+      4
+    ],
+    "https://web-scraping.dev/product/25?variant=orange-small": [
+      4
+    ]
+  },
+  "dark": {
+    "https://web-scraping.dev/product/14": [
+      0
+    ],
+    "https://web-scraping.dev/product/14?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/2": [
+      0
+    ],
+    "https://web-scraping.dev/product/26": [
+      0
+    ],
+    "https://web-scraping.dev/product/26?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/2?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      0
+    ]
+  },
+  "energy": {
+    "https://web-scraping.dev/product/14": [
+      2
+    ],
+    "https://web-scraping.dev/product/14?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/15": [
+      1
+    ],
+    "https://web-scraping.dev/product/15?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/15?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/16": [
+      1
+    ],
+    "https://web-scraping.dev/product/16?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/16?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/17": [
+      1
+    ],
+    "https://web-scraping.dev/product/17?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/17?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/18": [
+      1
+    ],
+    "https://web-scraping.dev/product/18?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/18?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/2": [
+      2
+    ],
+    "https://web-scraping.dev/product/26": [
+      2
+    ],
+    "https://web-scraping.dev/product/26?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/27": [
+      1
+    ],
+    "https://web-scraping.dev/product/27?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/27?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/28": [
+      1
+    ],
+    "https://web-scraping.dev/product/28?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/28?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/2?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/3": [
+      1
+    ],
+    "https://web-scraping.dev/product/3?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/3?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/4": [
+      1
+    ],
+    "https://web-scraping.dev/product/4?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/4?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/5": [
+      1
+    ],
+    "https://web-scraping.dev/product/5?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/5?variant=six-pack": [
+      1
+    ],
+    "https://web-scraping.dev/product/6": [
+      1
+    ],
+    "https://web-scraping.dev/product/6?variant=one": [
+      1
+    ],
+    "https://web-scraping.dev/product/6?variant=six-pack": [
+      1
+    ]
+  },
+  "potion": {
+    "https://web-scraping.dev/product/14": [
+      3
+    ],
+    "https://web-scraping.dev/product/14?variant=one": [
+      3
+    ],
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      3
+    ],
+    "https://web-scraping.dev/product/15": [
+      2
+    ],
+    "https://web-scraping.dev/product/15?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/15?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/16": [
+      2
+    ],
+    "https://web-scraping.dev/product/16?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/16?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/17": [
+      2
+    ],
+    "https://web-scraping.dev/product/17?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/17?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/18": [
+      2
+    ],
+    "https://web-scraping.dev/product/18?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/18?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/2": [
+      3
+    ],
+    "https://web-scraping.dev/product/26": [
+      3
+    ],
+    "https://web-scraping.dev/product/26?variant=one": [
+      3
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      3
+    ],
+    "https://web-scraping.dev/product/27": [
+      2
+    ],
+    "https://web-scraping.dev/product/27?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/27?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/28": [
+      2
+    ],
+    "https://web-scraping.dev/product/28?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/28?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/2?variant=one": [
+      3
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      3
+    ],
+    "https://web-scraping.dev/product/3": [
+      2
+    ],
+    "https://web-scraping.dev/product/3?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/3?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/4": [
+      2
+    ],
+    "https://web-scraping.dev/product/4?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/4?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/5": [
+      2
+    ],
+    "https://web-scraping.dev/product/5?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/5?variant=six-pack": [
+      2
+    ],
+    "https://web-scraping.dev/product/6": [
+      2
+    ],
+    "https://web-scraping.dev/product/6?variant=one": [
+      2
+    ],
+    "https://web-scraping.dev/product/6?variant=six-pack": [
+      2
+    ]
+  },
+  "one": {
+    "https://web-scraping.dev/product/14?variant=one": [
+      5
+    ],
+    "https://web-scraping.dev/product/15?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/16?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/17?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/18?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/26?variant=one": [
+      5
+    ],
+    "https://web-scraping.dev/product/27?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/28?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/2?variant=one": [
+      5
+    ],
+    "https://web-scraping.dev/product/3?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/4?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/5?variant=one": [
+      4
+    ],
+    "https://web-scraping.dev/product/6?variant=one": [
+      4
+    ]
+  },
+  "six": {
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/15?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/16?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/17?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/18?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/27?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/28?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/3?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/4?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/5?variant=six-pack": [
+      4
+    ],
+    "https://web-scraping.dev/product/6?variant=six-pack": [
+      4
+    ]
+  },
+  "pack": {
+    "https://web-scraping.dev/product/14?variant=six-pack": [
+      6
+    ],
+    "https://web-scraping.dev/product/15?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/16?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/17?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/18?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/26?variant=six-pack": [
+      6
+    ],
+    "https://web-scraping.dev/product/27?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/28?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/2?variant=six-pack": [
+      6
+    ],
+    "https://web-scraping.dev/product/3?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/4?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/5?variant=six-pack": [
+      5
+    ],
+    "https://web-scraping.dev/product/6?variant=six-pack": [
+      5
+    ]
+  },
+  "teal": {
+    "https://web-scraping.dev/product/15": [
+      0
+    ],
+    "https://web-scraping.dev/product/15?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/15?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/27": [
+      0
+    ],
+    "https://web-scraping.dev/product/27?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/27?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/3": [
+      0
+    ],
+    "https://web-scraping.dev/product/3?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/3?variant=six-pack": [
+      0
+    ]
+  },
+  "dragon": {
+    "https://web-scraping.dev/product/18": [
+      0
+    ],
+    "https://web-scraping.dev/product/18?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/18?variant=six-pack": [
+      0
+    ],
+    "https://web-scraping.dev/product/6": [
+      0
+    ],
+    "https://web-scraping.dev/product/6?variant=one": [
+      0
+    ],
+    "https://web-scraping.dev/product/6?variant=six-pack": [
+      0
+    ]
+  },
+  "hiking": {
+    "https://web-scraping.dev/product/19": [
+      0
+    ],
+    "https://web-scraping.dev/product/19?variant=6": [
+      0
+    ],
+    "https://web-scraping.dev/product/19?variant=7": [
+      0
+    ],
+    "https://web-scraping.dev/product/19?variant=8": [
+      0
+    ],
+    "https://web-scraping.dev/product/19?variant=9": [
+      0
+    ],
+    "https://web-scraping.dev/product/7": [
+      0
+    ],
+    "https://web-scraping.dev/product/7?variant=6": [
+      0
+    ],
+    "https://web-scraping.dev/product/7?variant=7": [
+      0
+    ],
+    "https://web-scraping.dev/product/7?variant=8": [
+      0
+    ],
+    "https://web-scraping.dev/product/7?variant=9": [
+      0
+    ]
+  },
+  "boots": {
+    "https://web-scraping.dev/product/19": [
+      1
+    ],
+    "https://web-scraping.dev/product/19?variant=6": [
+      1
+    ],
+    "https://web-scraping.dev/product/19?variant=7": [
+      1
+    ],
+    "https://web-scraping.dev/product/19?variant=8": [
+      1
+    ],
+    "https://web-scraping.dev/product/19?variant=9": [
+      1
+    ],
+    "https://web-scraping.dev/product/7": [
+      1
+    ],
+    "https://web-scraping.dev/product/7?variant=6": [
+      1
+    ],
+    "https://web-scraping.dev/product/7?variant=7": [
+      1
+    ],
+    "https://web-scraping.dev/product/7?variant=8": [
+      1
+    ],
+    "https://web-scraping.dev/product/7?variant=9": [
+      1
+    ]
+  },
+  "outdoor": {
+    "https://web-scraping.dev/product/19": [
+      2
+    ],
+    "https://web-scraping.dev/product/19?variant=6": [
+      2
+    ],
+    "https://web-scraping.dev/product/19?variant=7": [
+      2
+    ],
+    "https://web-scraping.dev/product/19?variant=8": [
+      2
+    ],
+    "https://web-scraping.dev/product/19?variant=9": [
+      2
+    ],
+    "https://web-scraping.dev/product/7": [
+      2
+    ],
+    "https://web-scraping.dev/product/7?variant=6": [
+      2
+    ],
+    "https://web-scraping.dev/product/7?variant=7": [
+      2
+    ],
+    "https://web-scraping.dev/product/7?variant=8": [
+      2
+    ],
+    "https://web-scraping.dev/product/7?variant=9": [
+      2
+    ]
+  },
+  "adventures": {
+    "https://web-scraping.dev/product/19": [
+      3
+    ],
+    "https://web-scraping.dev/product/19?variant=6": [
+      3
+    ],
+    "https://web-scraping.dev/product/19?variant=7": [
+      3
+    ],
+    "https://web-scraping.dev/product/19?variant=8": [
+      3
+    ],
+    "https://web-scraping.dev/product/19?variant=9": [
+      3
+    ],
+    "https://web-scraping.dev/product/7": [
+      3
+    ],
+    "https://web-scraping.dev/product/7?variant=6": [
+      3
+    ],
+    "https://web-scraping.dev/product/7?variant=7": [
+      3
+    ],
+    "https://web-scraping.dev/product/7?variant=8": [
+      3
+    ],
+    "https://web-scraping.dev/product/7?variant=9": [
+      3
+    ]
+  },
+  "7": {
+    "https://web-scraping.dev/product/19?variant=7": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      6
+    ],
+    "https://web-scraping.dev/product/7?variant=7": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      6
+    ]
+  },
+  "8": {
+    "https://web-scraping.dev/product/19?variant=8": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      6
+    ],
+    "https://web-scraping.dev/product/7?variant=8": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      6
+    ]
+  },
+  "9": {
+    "https://web-scraping.dev/product/19?variant=9": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      6
+    ],
+    "https://web-scraping.dev/product/21?variant=9": [
+      4
+    ],
+    "https://web-scraping.dev/product/7?variant=9": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      6
+    ],
+    "https://web-scraping.dev/product/9?variant=9": [
+      4
+    ]
+  },
+  "womens": {
+    "https://web-scraping.dev/product/20": [
+      0
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      0
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      0
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      0
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      0
+    ],
+    "https://web-scraping.dev/product/8": [
+      0
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      0
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      0
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      0
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      0
+    ]
+  },
+  "high": {
+    "https://web-scraping.dev/product/20": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      1
+    ],
+    "https://web-scraping.dev/product/8": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      1
+    ]
+  },
+  "heel": {
+    "https://web-scraping.dev/product/20": [
+      2
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      2
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      2
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      2
+    ],
+    "https://web-scraping.dev/product/8": [
+      2
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      2
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      2
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      2
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      2
+    ]
+  },
+  "sandals": {
+    "https://web-scraping.dev/product/20": [
+      3
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      3
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      3
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      3
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      3
+    ],
+    "https://web-scraping.dev/product/8": [
+      3
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      3
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      3
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      3
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      3
+    ]
+  },
+  "beige": {
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      5
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      5
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      5
+    ]
+  },
+  "running": {
+    "https://web-scraping.dev/product/21": [
+      0
+    ],
+    "https://web-scraping.dev/product/21?variant=10": [
+      0
+    ],
+    "https://web-scraping.dev/product/21?variant=11": [
+      0
+    ],
+    "https://web-scraping.dev/product/21?variant=12": [
+      0
+    ],
+    "https://web-scraping.dev/product/21?variant=9": [
+      0
+    ],
+    "https://web-scraping.dev/product/9": [
+      0
+    ],
+    "https://web-scraping.dev/product/9?variant=10": [
+      0
+    ],
+    "https://web-scraping.dev/product/9?variant=11": [
+      0
+    ],
+    "https://web-scraping.dev/product/9?variant=12": [
+      0
+    ],
+    "https://web-scraping.dev/product/9?variant=9": [
+      0
+    ]
+  },
+  "shoes": {
+    "https://web-scraping.dev/product/21": [
+      1
+    ],
+    "https://web-scraping.dev/product/21?variant=10": [
+      1
+    ],
+    "https://web-scraping.dev/product/21?variant=11": [
+      1
+    ],
+    "https://web-scraping.dev/product/21?variant=12": [
+      1
+    ],
+    "https://web-scraping.dev/product/21?variant=9": [
+      1
+    ],
+    "https://web-scraping.dev/product/9": [
+      1
+    ],
+    "https://web-scraping.dev/product/9?variant=10": [
+      1
+    ],
+    "https://web-scraping.dev/product/9?variant=11": [
+      1
+    ],
+    "https://web-scraping.dev/product/9?variant=12": [
+      1
+    ],
+    "https://web-scraping.dev/product/9?variant=9": [
+      1
+    ]
+  },
+  "men": {
+    "https://web-scraping.dev/product/21": [
+      2
+    ],
+    "https://web-scraping.dev/product/21?variant=10": [
+      2
+    ],
+    "https://web-scraping.dev/product/21?variant=11": [
+      2
+    ],
+    "https://web-scraping.dev/product/21?variant=12": [
+      2
+    ],
+    "https://web-scraping.dev/product/21?variant=9": [
+      2
+    ],
+    "https://web-scraping.dev/product/9": [
+      2
+    ],
+    "https://web-scraping.dev/product/9?variant=10": [
+      2
+    ],
+    "https://web-scraping.dev/product/9?variant=11": [
+      2
+    ],
+    "https://web-scraping.dev/product/9?variant=12": [
+      2
+    ],
+    "https://web-scraping.dev/product/9?variant=9": [
+      2
+    ]
+  },
+  "10": {
+    "https://web-scraping.dev/product/21?variant=10": [
+      4
+    ],
+    "https://web-scraping.dev/product/9?variant=10": [
+      4
+    ]
+  },
+  "11": {
+    "https://web-scraping.dev/product/21?variant=11": [
+      4
+    ],
+    "https://web-scraping.dev/product/9?variant=11": [
+      4
+    ]
+  },
+  "12": {
+    "https://web-scraping.dev/product/21?variant=12": [
+      4
+    ],
+    "https://web-scraping.dev/product/9?variant=12": [
+      4
+    ]
+  },
+  "2": {
+    "https://web-scraping.dev/products?category=apparel&page=2": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=2": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household&page=2": [
+      3
+    ],
+    "https://web-scraping.dev/products?page=2": [
+      3
+    ]
+  },
+  "3": {
+    "https://web-scraping.dev/products?category=apparel&page=3": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=3": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household&page=3": [
+      3
+    ],
+    "https://web-scraping.dev/products?page=3": [
+      3
+    ]
+  },
+  "4": {
+    "https://web-scraping.dev/products?category=apparel&page=4": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=consumables&page=4": [
+      3
+    ],
+    "https://web-scraping.dev/products?category=household&page=4": [
+      3
+    ],
+    "https://web-scraping.dev/products?page=4": [
+      3
+    ]
+  }
+}

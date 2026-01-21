@@ -1,0 +1,44 @@
+{
+  "query": "ChocoDelight orange",
+  "total_documents": 156,
+  "documents_filtered": 17,
+  "results_returned": 3,
+  "documents": [
+    {
+      "title": "Box of Chocolate Candy",
+      "url": "https://web-scraping.dev/product/13?variant=orange-medium",
+      "description": "Indulge your sweet tooth with our Box of Chocolate Candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our Box of Chocolate Candy is sure to satisfy.",
+      "score": 9.647930578162338,
+      "metadata": {
+        "origin": "",
+        "brand": "ChocoDelight",
+        "avg_rating": 4.6,
+        "review_count": 5
+      }
+    },
+    {
+      "title": "Box of Chocolate Candy",
+      "url": "https://web-scraping.dev/product/1?variant=orange-large",
+      "description": "Indulge your sweet tooth with our Box of Chocolate Candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our Box of Chocolate Candy is sure to satisfy.",
+      "score": 9.647930578162338,
+      "metadata": {
+        "origin": "",
+        "brand": "ChocoDelight",
+        "avg_rating": 4.6,
+        "review_count": 5
+      }
+    },
+    {
+      "title": "Box of Chocolate Candy",
+      "url": "https://web-scraping.dev/product/25?variant=orange-medium",
+      "description": "Indulge your sweet tooth with our Box of Chocolate Candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our Box of Chocolate Candy is sure to satisfy.",
+      "score": 9.647930578162338,
+      "metadata": {
+        "origin": "",
+        "brand": "ChocoDelight",
+        "avg_rating": 4.6,
+        "review_count": 5
+      }
+    }
+  ]
+}

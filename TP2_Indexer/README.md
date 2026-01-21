@@ -145,8 +145,7 @@ Depuis la racine du projet :
 python indexer.py
 Les fichiers générés sont disponibles dans :
 
-pgsql
-Copier le code
+
 out_indexes/
 ├── title_index.json
 ├── description_index.json

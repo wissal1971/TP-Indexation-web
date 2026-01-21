@@ -6,31 +6,41 @@ from urllib.parse import urlparse, parse_qs
 from collections import defaultdict
 
 # =========================
-# Paths
+# Chemins des fichiers
 # =========================
+# Fichier d'entrée contenant les produits au format JSON Lines
 DATA_PATH = Path("data/products.jsonl")
+
+# Dossier de sortie pour stocker les index générés
 OUT_DIR = Path("out_indexes")
 
 # =========================
-# Tokenization config
+# Configuration de la tokenisation
 # =========================
+# Liste de mots très fréquents (français + anglais) à exclure de l’index
+# car ils n’apportent pas d’information discriminante
 STOPWORDS = {
     "le", "la", "les", "un", "une", "des", "de", "du", "d", "et", "ou", "à", "a",
     "the", "a", "an", "and", "or", "to", "of", "in", "for", "with", "on", "at",
 }
+
+# Table de traduction permettant de supprimer la ponctuation
 PUNCT_TABLE = str.maketrans("", "", string.punctuation)
 
 # =========================
-# URL parsing
+# Parsing des URLs
 # =========================
+# Expression régulière pour extraire l’identifiant produit depuis une URL
 PRODUCT_ID_RE = re.compile(r"/product/(\d+)(?:/|$)")
 
-
 # =========================
-# IO
+# Fonctions d’entrée / sortie
 # =========================
 def load_jsonl(path: Path):
-    """Créer un dictionnaire par line JSON."""
+    """
+    Charge un fichier JSONL (une ligne = un objet JSON).
+    Chaque ligne est convertie en dictionnaire Python.
+    """
     with path.open("r", encoding="utf-8") as f:
         for i, line in enumerate(f, start=1):
             line = line.strip()
@@ -39,21 +49,26 @@ def load_jsonl(path: Path):
             try:
                 yield json.loads(line)
             except json.JSONDecodeError as e:
-                raise ValueError(f"Invalid JSON at line {i}: {e}") from e
+                raise ValueError(f"JSON invalide à la ligne {i} : {e}") from e
 
 
 def save_json(obj, path: Path):
-    """Sauvegarde JSON avec UTF-8 et indentation."""
+    """
+    Sauvegarde un objet Python au format JSON lisible
+    (indentation + encodage UTF-8).
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
-
 # =========================
-# URL helpers
+# Fonctions utilitaires sur les URLs
 # =========================
 def extract_product_id(url: str):
-    """Récupère l’ID du produit dans l’URL si possible, sinon None."""
+    """
+    Extrait l’identifiant du produit à partir de l’URL.
+    Retourne None si le format ne correspond pas.
+    """
     if not url:
         return None
     parsed = urlparse(url)
@@ -61,27 +76,39 @@ def extract_product_id(url: str):
     return m.group(1) if m else None
 
 
-
 def extract_variant(url: str):
-    """Extrait la variante depuis l’URL."""
+    """
+    Extrait la variante du produit depuis les paramètres de l’URL
+    (exemple : ?variant=123).
+    """
     if not url:
         return None
     parsed = urlparse(url)
     qs = parse_qs(parsed.query)
     return qs.get("variant", [None])[0]
 
-
 # =========================
-# Text helpers
+# Fonctions de traitement du texte
 # =========================
 def normalize_token(raw: str):
+    """
+    Normalise un mot :
+    - passage en minuscules
+    - suppression de la ponctuation
+    - suppression des apostrophes
+    """
     tok = raw.lower().translate(PUNCT_TABLE)
     tok = tok.replace("’", "").replace("'", "")
     return tok
 
 
 def tokenize(text: str):
-    """Tokenisation par espace avec nettoyage et suppression des stopwords."""
+    """
+    Découpe un texte en tokens simples :
+    - séparation par espaces
+    - normalisation
+    - suppression des stopwords
+    """
     if not text:
         return []
     out = []
@@ -93,7 +120,10 @@ def tokenize(text: str):
 
 
 def tokenize_with_positions(text: str):
-    """Retourne une liste de couples (token, position dans le champ)."""
+    """
+    Identique à tokenize(), mais conserve la position de chaque token
+    dans le champ texte (utile pour un index positionnel).
+    """
     if not text:
         return []
     out = []
@@ -105,12 +135,14 @@ def tokenize_with_positions(text: str):
         pos += 1
     return out
 
-
 # =========================
-# Doc prep
+# Préparation des documents
 # =========================
 def deduplicate_by_url(docs):
-    """Conserve uniquement la première occurrence de chaque URL."""
+    """
+    Supprime les doublons en conservant uniquement
+    la première occurrence de chaque URL.
+    """
     seen = set()
     out = []
     for d in docs:
@@ -124,7 +156,8 @@ def deduplicate_by_url(docs):
 
 def build_documents_section(docs):
     """
-    Stocke les liens et les identifiants pour chaque URL de document.
+    Construit une section 'documents' qui regroupe
+    les métadonnées principales par URL.
     """
     documents = {}
     for d in docs:
@@ -136,12 +169,14 @@ def build_documents_section(docs):
         }
     return documents
 
-
 # =========================
-# Index builders
+# Construction des index
 # =========================
 def build_inverted_index_urls(docs, field_name: str):
-    """token -> URLs des documents (triées)."""
+    """
+    Construit un index inversé simple :
+    token -> liste triée des URLs contenant ce token.
+    """
     index = defaultdict(set)
     for d in docs:
         url = d["url"]
@@ -152,7 +187,10 @@ def build_inverted_index_urls(docs, field_name: str):
 
 
 def build_positional_index_urls(docs, field_name: str):
-    """token -> {url -> [positions]}"""
+    """
+    Construit un index positionnel :
+    token -> { URL -> liste des positions }
+    """
     index = defaultdict(lambda: defaultdict(list))
     for d in docs:
         url = d["url"]
@@ -164,8 +202,8 @@ def build_positional_index_urls(docs, field_name: str):
 
 def build_reviews_stats_index(docs):
     """
-    url -> {total_reviews, avg_rating, last_rating}
-    (index non inversé)
+    Construit un index non inversé pour les avis :
+    URL -> statistiques agrégées (nombre, moyenne, dernier avis).
     """
     index = {}
     for d in docs:
@@ -174,7 +212,11 @@ def build_reviews_stats_index(docs):
 
         total = len(reviews)
         if total == 0:
-            index[url] = {"total_reviews": 0, "avg_rating": None, "last_rating": None}
+            index[url] = {
+                "total_reviews": 0,
+                "avg_rating": None,
+                "last_rating": None
+            }
             continue
 
         ratings = [
@@ -189,23 +231,26 @@ def build_reviews_stats_index(docs):
         sorted_reviews = sorted(reviews, key=review_date)
         last_rating = sorted_reviews[-1].get("rating")
 
-        index[url] = {"total_reviews": total, "avg_rating": avg, "last_rating": last_rating}
+        index[url] = {
+            "total_reviews": total,
+            "avg_rating": avg,
+            "last_rating": last_rating
+        }
     return index
 
 
 def build_feature_inverted_index_urls(docs, feature_key: str):
     """
-    Index inversé des features :
-    token -> liste triée des URLs canoniques des produits (sans variantes).
-    Uniquement pour les documents ayant un product_id et aucune variante.
-
+    Construit un index inversé pour une caractéristique produit
+    (ex : marque ou pays d’origine).
+    Seuls les produits canoniques (sans variante) sont pris en compte.
     """
     index = defaultdict(set)
     for d in docs:
         if not d.get("product_id"):
             continue
         if d.get("variant") is not None:
-            continue  # skip variants
+            continue
 
         url = d["url"]
         features = d.get("product_features", {}) or {}
@@ -218,13 +263,14 @@ def build_feature_inverted_index_urls(docs, feature_key: str):
 
     return {tok: sorted(list(urls)) for tok, urls in index.items()}
 
-
 # =========================
-# Main
+# Fonction principale
 # =========================
 def main():
+    # Chargement des documents bruts
     raw_docs = list(load_jsonl(DATA_PATH))
 
+    # Normalisation des champs utiles
     docs = []
     for r in raw_docs:
         url = r.get("url")
@@ -241,38 +287,28 @@ def main():
             "variant": extract_variant(url),
         })
 
+    # Suppression des doublons
     docs = deduplicate_by_url(docs)
-    print(f"Total documents read: {len(docs)}")
+    print(f"Nombre total de documents : {len(docs)}")
 
-    # Section commune des documents (contient le champ « links »)
-
-    documents_section = build_documents_section(docs)
-
-    # Index du titre : inversé + positionnel, identifiant du document = URL
-
+    # Construction des index
     title_inverted = build_inverted_index_urls(docs, "title")
     title_positional = build_positional_index_urls(docs, "title")
 
-    # DESCRIPTION index
     desc_inverted = build_inverted_index_urls(docs, "description")
     desc_positional = build_positional_index_urls(docs, "description")
 
-    # REVIEWS stats index 
     reviews_stats = build_reviews_stats_index(docs)
 
-    # FEATURES: brand and origin 
     brand_index = build_feature_inverted_index_urls(docs, "brand")
     origin_index = build_feature_inverted_index_urls(docs, "made in")
 
-    # Sauvegarde des index   
+    # Sauvegarde des résultats
     save_json(title_inverted, OUT_DIR / "title_index.json")
     save_json(desc_inverted, OUT_DIR / "description_index.json")
     save_json(brand_index, OUT_DIR / "brand_index.json")
     save_json(origin_index, OUT_DIR / "origin_index.json")
     save_json(reviews_stats, OUT_DIR / "reviews_index.json")
-
-
-
 
 
 if __name__ == "__main__":
